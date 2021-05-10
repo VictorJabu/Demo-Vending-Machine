@@ -1,0 +1,20 @@
+<div class="overflow-auto">
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 text-center" ng-repeat="pr in products | limitTo: 16">
+        <img class="rounded-circle my-3" ng-src="{{pr.picDest}}" width="100" height="100">
+        <br/>
+        <button class="btn btn-primary" type="submit" ng-model="product" ng-click="purchaseProduct(pr.price, pr.name)">{{pr.id}} : {{pr.price}}</button>
+    </div>
+</div>
+</div>
+ <br />
+<br />
+  Enter amount Only 50c, 20c, R1, R5: <input type="text" ng-model="amount"/>
+  <button mat-stroked-button color="primary" name="addAmount" ng-click="addAmount()"></button>
+
+ <span>Total Amount Entered so Far: {{totalAmount}}></span>
+            
+                      
+<div class="alert alert-primary" role="alert" ng-show="checkSomething()">
+  Please enter the right amount for the vending machine 
+</div>
